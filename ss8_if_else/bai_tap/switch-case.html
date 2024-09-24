@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhập tháng" id="nhapThang">
+    <button onclick="tinhSoNgay()">Tính số ngày</button>
+    <h1 id="result"></h1>
+    <script>
+        function tinhSoNgay(){
+            let mounth= +document.getElementById("nhapThang").value;
+            switch(mounth){
+                case 1:
+                    document.getElementById("result").innerText="Thang co 31 ngay";
+                    break;
+                case 2:
+                    document.getElementById("result").innerText="Thang co 28 hoac 29 ngay";
+                    break;
+                case 3:
+                    document.getElementById("result").innerText="Thang co 31 ngay";
+                    break;
+                case 4:
+                    document.getElementById("result").innerText="Thang co 30 ngay";
+                    break;
+                case 5:
+                    document.getElementById("result").innerText="Thang co 31 ngay";
+                    break;
+                case 6:
+                    document.getElementById("result").innerText="Thang co 30 ngay";
+                    break;
+                case 7:
+                    document.getElementById("result").innerText="Thang co 31 ngay";
+                    break;
+                case 8:
+                    document.getElementById("result").innerText="Thang co 31 ngay";
+                    break;
+                case 9:
+                    document.getElementById("result").innerText="Thang co 30 ngay";
+                    break;
+                case 10:
+                    document.getElementById("result").innerText="Thang co 31 ngay";
+                    break;
+                case 11:
+                    document.getElementById("result").innerText="Thang co 30 ngay";
+                    break;
+                case 12:
+                    document.getElementById("result").innerText="Thang co 31 ngay";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
