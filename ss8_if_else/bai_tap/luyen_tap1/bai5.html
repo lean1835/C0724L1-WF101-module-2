@@ -18,16 +18,16 @@
             let diemCK=+document.getElementById("diemCK").value;
             let diemTBM= (diemKT*1 +diemGK*2+diemCK*3)/6 ;
             alert("diemtbm ="+diemTBM);
-            if (diemTBM < 6.5)
-              document.write("hoc luc trung binh");
-            else if (diemTBM < 8.0)
+            if (diemTBM < 6.5){
+                document.write("hoc luc trung binh");
+            }else if (diemTBM < 8.0){
                 document.write("hoc luc kha");
-            else if (diemTBM <= 10.0)
+            }else if (diemTBM <= 10.0){
                 document.write("hoc luc gioi");
-            else
+            }else{
                 document.write("khong hop le");
+            } 
         }
-        
     </script>
 </body>
 </html>

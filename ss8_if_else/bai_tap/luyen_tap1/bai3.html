@@ -12,12 +12,14 @@
     <script>
         function check(){
             let a=+document.getElementById("nhapSo").value;
-            if(a>0)
-                document.getElementById("result").innerHTML="so da nhap >0"
-            else if(a<0)
-                document.getElementById("result").innerHTML="so da nhap <0"
-            else    
-                document.getElementById("result").innerHTML="so da nhap =0"
+            if(a>0){
+                document.getElementById("result").innerHTML="so da nhap >0";
+            }else if(a<0){
+                document.getElementById("result").innerHTML="so da nhap <0";
+            }else{
+                document.getElementById("result").innerHTML="so da nhap =0";
+            }    
+                
         }
     </script>
 </body>

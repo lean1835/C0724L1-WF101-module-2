@@ -18,23 +18,17 @@
                 if (phutGoi<=50){
                     let soCuoc=phutGoi*600;
                     document.getElementById("result").innerText="so cuoc la: "+soCuoc+" | so tien con lai "+(phiThueBao-soCuoc);
-                }
-                
-                else if (phutGoi <= 200){
+                }else if (phutGoi <= 200){
                     let soCuoc=phutGoi*400;
                     document.getElementById("result").innerText="so cuoc la: "+soCuoc+" | so tien con lai "+(phiThueBao-soCuoc);
-                }
-
-                else{
+                }else{
                     let soCuoc=phutGoi*200;
                     document.getElementById("result").innerText="so cuoc la: "+soCuoc+" | so tien con lai "+(phiThueBao-soCuoc);
                 }
-            }else
+            }else{
                 document.getElementById("result").innerText="phi thue bao khong du";
-                
-                
+            }          
         }
-        
     </script>
 </body>
 </html> 
