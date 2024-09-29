@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bảng cửu chương</h1>
+    <script>
+        let i,j,sout;
+        //chú ý dấu nháy đơn nháy kép
+        sout = "<table border='1' width='300' cellspacing='0' cellpadding='15'>"; //cộng thẻ table
+        for(i=1;i<=10;i++){
+            sout +="<tr>" // cộng thẻ mở hàng
+            for(j=1;j<=10;j++){
+                sout+= "<td>"+i+"*"+j+"="+i*j+"</td>";  //cộng 1 ô 
+            }
+            sout += "</td>"; //cộng thẻ đóng hàng
+        }
+        sout += "</table>";
+        document.write(sout);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="playGame()">Chơi</button>
+    <script>
+        function playGame(){
+            let a=+prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?");
+            let b;
+            const kq=Math.floor(Math.random()*a);
+            let i;
+            for(i=1;i<=3;i++){
+                b=+prompt("Nhập số bạn đoán: ");
+                if(b>kq){
+                    alert("Số bạn đoán lớn hơn");
+                }else if(b<kq){
+                    alert("Số bạn đoán bé hơn");
+                }else{
+                    alert("Bạn đoán chính xác");
+                    break;
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>20 số fibo đầu tiên</h1>
+    <script>
+        let count=4;
+        let a=1,b=1,c;
+        document.write("1.  "+0+"<br>")
+        document.write("2.  "+1+"<br>");
+        document.write("3.  "+1+"<br>");
+        while(count<=20){
+            c=a+b;
+            a=b;
+            b=c;
+            document.write(count+".  "+c+"<br>");
+            count++;
+        }
+    </script>
+</body>
+</html>
