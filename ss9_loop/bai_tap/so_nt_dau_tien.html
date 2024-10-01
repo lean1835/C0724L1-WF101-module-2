@@ -7,10 +7,20 @@
 </head>
 <body>
     <script>
-        let count =0,i=2;
+        let count =0,i=2,j=2;
         let x=+prompt("Hien thi n số nguyên tố đầu tiên");
-        while(x<count){
-            
+        while(count<x){
+            let check=true;
+            for(j=2;j<=Math.sqrt(i);j++){
+                if(i%j==0){
+                    check =false;
+                }
+            }
+            if(check==true){
+                count++;
+                document.write(i+"<br>");
+            }
+            i++;
         }
     </script>
 </body>
