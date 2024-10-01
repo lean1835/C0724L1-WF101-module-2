@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let height=+prompt("Nhap chieu cao hinh");
+        let width=+prompt("Nhap do rong hinh");
+        for(let i=0;i<height;i++){
+            for(let j=0;j<width;j++){
+                if(i==0||j==0||i==height-1||j==width-1){
+                    document.write("*"); 
+                }else{
+                    document.write("&ensp;");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
