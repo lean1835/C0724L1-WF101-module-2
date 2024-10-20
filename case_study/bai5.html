@@ -9,9 +9,10 @@
     <script>
 
         let n=prompt("nhap n: ");
-        n.splice(3,1);
+        let num=n.toString();
+        
 
-        alert(n);
+        alert(num.slice(3,1));
         function findMaxNumber(n){
             let regex=/^\d{4}$/;
             let check=regex.test(n);
