@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addStudent()">Thêm mới học viên</button>
+    <button onclick="editStudent()">Sửa thông tin học viên</button>
+    <button onclick="delStudent()">Xóa học viên</button>
+    <table border="1" style="border-collapse:collapse ;" id="table1">
+        <thead>
+            <tr>
+                <td>Mã học viên</td>
+                <td>Tên</td>
+                <td>Lớp</td>
+                <td>Email</td>
+                <td>Ngày Sinh</td>
+            </tr>
+        </thead>
+        <tbody id="in4">
+
+        </tbody>
+    </table>
+    <script>
+        let studentTable='';
+        let infoStudent=[];
+        class Student{
+            constructor(id,name,classStudent,mail,date){
+                this.id=id;
+                this.name=name;
+                this.classStudent=classStudent;
+                this.mail=mail;
+                this.date=date;
+            }
+        }
+        function displayStudent(){
+            studentTable='';
+            for(let i=0;i<infoStudent.length;i++){
+                studentTable += `
+                                <tr>
+                                    <td>${infoStudent[i].id}</td>
+                                    <td>${infoStudent[i].name}</td>
+                                    <td>${infoStudent[i].classStudent}</td>
+                                    <td>${infoStudent[i].mail}</td>
+                                    <td>${infoStudent[i].date}</td>
+                                </tr>
+                                `;
+            }
+            document.getElementById('in4').innerHTML=studentTable;
+        }
+        function addStudent(){
+            let id;
+            let date;
+            let name
+            let checkName=/^\w{1,5}$/;
+            let checkRegexId = /^HV-\d{4}$/;  //^\d{2}/\d{2}/\d{4}$
+            let checkRegexDate = /^\d{2}\/\d{2}\/\d{4}$/;
+
+            //nhap id
+            do{
+                id=prompt("Nhap id (dạng HV-XXXX )");
+            }while(!checkRegexId.test(id));
+            //nhap ten
+            do{
+                name=prompt("Nhap ten");
+            }while(!checkName.test(name));
+            //nhap ten lopp
+            let classStudent=prompt("Nhap ten lop");
+            //nhap mail
+            let mail=prompt("Nhap mail: ");
+            //nhap ngay sinh
+            do{
+                date=prompt("Nhap ngay sinh: ");
+            }while(checkRegexDate.test(date));
+            let newStudent= new Student(id,name,classStudent,mail,date);
+            infoStudent.push(newStudent);
+            displayStudent();
+        }
+    </script>
+</body>
+</html>
